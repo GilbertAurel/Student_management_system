@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/add.css' %}">
+
+<div class="add">
+    <div class="add__header">
+        <h1>Add New Student</h1>
+        <a href="/homeStudent">Back to Student Menu</a>
+    </div>
+
+    <div class="add__body">
+        <form action="/addStudent/" method="POST">
+            <div class="add__id">
+                <p>Student ID:</p>
+                <input type="text" placeholder="e.g. L19253010" name="id" autocomplete="off">
+            </div>
+            <div class="add__name">
+                <p>Student Name:</p>
+                <input type="text" placeholder="e.g. Gilbert Aurel" name="name" autocomplete="off">
+            </div>
+            <input class="add__submit" type="submit" value="Add Student"/>
+        </form>
+    </div>
+</div>
+{% endblock %}

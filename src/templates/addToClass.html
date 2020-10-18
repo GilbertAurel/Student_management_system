@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/addAssign.css' %}">
+
+<div class="assign">
+    <div class="assign__header">
+        <h1 class="assign__title">
+            Add Student to
+        {% for class in class %}
+            {{class.class_name}}
+        {% endfor %}
+             Class
+        </h1>
+        <a href="/homeClass">Back to Class Menu</a>
+    </div>
+
+    <div class="assign__body">
+        {% for student in student %}
+               <form action="/addToClass/" method="POST">
+                   {% for class in class %}
+                        <input type="hidden" name="class_id" value="{{ class.class_id }}">
+                    {% endfor %}
+                   <input type="hidden" name="student_id" value="{{ student.student_id }}">
+                   <input class="assign__class" type="submit" value="{{ student.student_id }}">
+               </form>
+        {% endfor %}
+    </div>
+
+    <p class="assign__count">Found {{ count }} students are not in the class</p>
+    <h1 class="assign__desc">Scroll to see all students</h1>
+</div>
+{% endblock %}

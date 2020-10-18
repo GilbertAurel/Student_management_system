@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/showStudent.css' %}">
+
+<div class="show-student">
+     <div class="show-student__header">
+        <h1>All Students</h1>
+        <a href="/homeStudent">Back to Student Menu</a>
+    </div>
+
+    <div class="show-student__body">
+        {% for student in students %}
+           <div class="show-student__class">
+               <h1>{{ student.student_name }}</h1>
+               <p>{{ student.student_id }}</p>
+           </div>
+        {% endfor %}
+    </div>
+
+    {% if count > 1 %}
+        <p class="show-student__count">Found {{ count }} students</p>
+    {% else %}
+        <p class="show-student__count">Found {{ count }} student</p>
+    {% endif %}
+
+    <h1 class="show-student__desc">Scroll to see all students</h1>
+</div>
+{% endblock %}

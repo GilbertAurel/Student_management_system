@@ -1,0 +1,21 @@
+html{
+  padding: 0;
+  margin: 0;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft Sans Serif";
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fcfcfc;
+}

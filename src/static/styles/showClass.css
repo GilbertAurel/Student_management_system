@@ -1,0 +1,68 @@
+.show-class {
+  width: 50vw;
+  height: 55vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.show-class__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.show-class__header h1 {
+  margin-bottom: 1rem;
+}
+.show-class__header a {
+  text-decoration: none;
+  color: gray;
+}
+.show-class__header a:hover {
+  color: #6DDCBD;
+}
+.show-class__body {
+  height: 90%;
+  width: 50%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 2rem;
+}
+.show-class__body::-webkit-scrollbar {
+  display: none;
+}
+.show-class__class {
+  width: 100%;
+  background-color: #6DDCBD;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.show-class__class:hover {
+  color: #6DDCBD;
+  background-color: #ededed;
+}
+.show-class__class h1 {
+  padding: 1.5rem 2rem;
+}
+.show-class__class p {
+  padding: 1rem 1.5rem;
+}
+.show-class__count {
+  font-size: 1em;
+  color: gray;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+.show-class__desc {
+  font-size: 1em;
+  color: gray;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=showClass.css.map */

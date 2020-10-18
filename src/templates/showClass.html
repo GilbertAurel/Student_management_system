@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/showClass.css' %}">
+
+<div class="show-class">
+     <div class="show-class__header">
+        <h1>All Classes</h1>
+        <a href="/homeClass">Back to Class Menu</a>
+    </div>
+
+    <div class="show-class__body">
+        {% for class in classes %}
+           <a class="show-class__class" href="/homeAssign?class={{ class.class_id }}" >
+               <h1>{{ class.class_name }}</h1>
+               <p>{{ class.class_id }}</p>
+           </a>
+        {% endfor %}
+    </div>
+
+    {% if count > 1 %}
+        <p class="show-class__count">Found {{ count }} classes</p>
+    {% else %}
+        <p class="show-class__count">Found {{ count }} class</p>
+    {% endif %}
+
+    <h1 class="show-class__desc">Scroll and click class to see class detail</h1>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--{% load static %}-->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/assign.css' %}">
+
+<div class="assign">
+    <div class="assign__header">
+        <h1 class="assign__title">
+        {% for class in class %}
+            {{class.class_name}}
+        {% endfor %}
+             Class
+        </h1>
+        <a href="/homeClass">Back to Class Menu</a>
+    </div>
+
+    <div class="assign__body">
+        {% for student in student %}
+           <div class="assign__class">
+               <p>{{ student.student_id }}</p>
+           </div>
+        {% endfor %}
+    </div>
+
+    {% if count > 1 %}
+        <p class="assign__count">Found {{ count }} students</p>
+        <h1 class="assign__desc">Scroll to see all students</h1>
+        <a href="/addToClass?class={{ class_id }}" class="assign__add">Add More Student</a>
+    {% elif count == 1 %}
+        <p class="assign__count">Found {{ count }} student</p>
+        <a href="/addToClass?class={{ class_id }}" class="assign__add">Add More Student</a>
+    {% else %}
+        <p class="assign__count">This class still has no student</p>
+        <a href="/addToClass?class={{ class_id }}" class="assign__add">Add Student</a>
+    {% endif %}
+
+</div>
+{% endblock %}

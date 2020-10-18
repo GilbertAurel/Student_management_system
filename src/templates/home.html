@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+
+<div class="home">
+    <div class="home__header">
+        <h1 class="home__title">Classroom Management System</h1>
+        <p>Homework 03 Django</p>
+    </div>
+
+    <div class="home__menu">
+        <a class="home__class" href="/homeClass">
+            <h1>Manage Classroom</h1>
+        </a>
+        <a class="home__student" href="/homeStudent">
+            <h1>Manage Student</h1>
+        </a>
+    </div>
+
+    <h1 class="home__name">by Gilbertus Aurel Satyawira L19253010</h1>
+</div>
+{% endblock %}

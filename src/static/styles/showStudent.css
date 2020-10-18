@@ -1,0 +1,62 @@
+.show-student {
+  width: 50vw;
+  height: 55vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.show-student__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.show-student__header h1 {
+  margin-bottom: 1rem;
+}
+.show-student__header a {
+  text-decoration: none;
+  color: gray;
+}
+.show-student__header a:hover {
+  color: #6DDCBD;
+}
+.show-student__body {
+  height: 90%;
+  width: 50%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 2rem;
+}
+.show-student__body::-webkit-scrollbar {
+  display: none;
+}
+.show-student__class {
+  width: 100%;
+  background-color: #6DDCBD;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+}
+.show-student__class h1 {
+  padding: 1rem 2rem;
+}
+.show-student__class p {
+  padding: 1rem 2rem;
+}
+.show-student__count {
+  font-size: 1em;
+  color: gray;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+.show-student__desc {
+  font-size: 1em;
+  color: gray;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=showStudent.css.map */

@@ -1,0 +1,59 @@
+.student {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.student__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.student__header h1 {
+  margin-bottom: 1rem;
+}
+.student__header a {
+  text-decoration: none;
+  color: gray;
+}
+.student__header a:hover {
+  color: #6DDCBD;
+}
+.student__body {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.student__new, .student__view {
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1rem solid transparent;
+  border-radius: 1rem;
+  margin: auto;
+  text-align: center;
+  opacity: 0.8;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.student__new:hover, .student__view:hover {
+  opacity: 1;
+}
+.student__new h1, .student__view h1 {
+  color: white;
+  font-size: 1.5em;
+  padding: 0 2rem;
+}
+.student__new {
+  background-color: #fca726;
+}
+.student__view {
+  background-color: #6DDCBD;
+}
+
+/*# sourceMappingURL=student.css.map */

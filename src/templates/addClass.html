@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/add.css' %}">
+
+<div class="add">
+    <div class="add__header">
+        <h1>Add New Class</h1>
+        <a href="/homeClass">Back to Class Menu</a>
+    </div>
+
+    <div class="add__body">
+        <form action="/addClass/" method="POST">
+            <div class="add__id">
+                <p>Class ID:</p>
+                <input type="text" placeholder="e.g. SWL-001" name="id" autocomplete="off">
+            </div>
+            <div class="add__name">
+                <p>Class Name:</p>
+                <input type="text" placeholder="e.g. Comprehensive Programming" name="name" autocomplete="off">
+            </div>
+            <input class="add__submit" type="submit" value="Deploy Class"/>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/student.css' %}">
+
+<div class="student">
+    <div class="student__header">
+        <h1>Manage Students</h1>
+        <a href="/">Back to Menu</a>
+    </div>
+
+    <div class="student__body">
+        <a class="student__new" href="/addStudent">
+            <h1>Add New Student</h1>
+        </a>
+        <a class="student__view" href="/showStudent">
+            <h1>View Students</h1>
+        </a>
+    </div>
+</div>
+{% endblock %}

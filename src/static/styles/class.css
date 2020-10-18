@@ -1,0 +1,59 @@
+.class {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.class__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.class__header h1 {
+  margin-bottom: 1rem;
+}
+.class__header a {
+  text-decoration: none;
+  color: gray;
+}
+.class__header a:hover {
+  color: #6DDCBD;
+}
+.class__body {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.class__new, .class__view {
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1rem solid transparent;
+  border-radius: 1rem;
+  margin: auto;
+  text-align: center;
+  opacity: 0.8;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.class__new:hover, .class__view:hover {
+  opacity: 1;
+}
+.class__new h1, .class__view h1 {
+  color: white;
+  font-size: 1.5em;
+  padding: 0 2rem;
+}
+.class__new {
+  background-color: #5b80b2;
+}
+.class__view {
+  background-color: #6DDCBD;
+}
+
+/*# sourceMappingURL=class.css.map */
